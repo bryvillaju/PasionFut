@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def lista_partidos(request):
+    return render(request, 'campeonato/lista_partidos.html', {})
