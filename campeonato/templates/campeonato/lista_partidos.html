@@ -1,0 +1,11 @@
+{% extends 'campeonato/base.html' %}
+{% block content %}
+{% for partido in partidos %}
+    <div class="post">
+        <div class="fecha">
+            {{ partido.Fecha_Partido }}
+        </div>
+        <h1><a href="{% url 'campeonato.views.detalle_partido' pk=partido.pk %}">{{ partido.Equipo1 }} - {{ partido.Equipo2 }}</a></h1>
+    </div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+    <html lang="es">
+	<meta charset="utf-8">
+	<meta name="keywords" content="futbol, campeonato, marcadores, partidos, Guatemala, Quetzaltenango">
+	<meta name="description" content="Esta es una página para revisar resultados y ver los próximos partidos de la liga nacional de futbol guatemalteco">
+        <head>
+            <title>Pasión Futbolera</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="{% static 'css/campeonato.css' %}"
+	</head>
+        <body>
+	<section id="contenedor">
+	<header>
+	{% if user.is_authenticated %}
+	<a href="{% url 'campeonato.views.nuevo_partido' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+	<h4><p class="top-menu">Hola {{ user.username }}<small>(<a href="{% url "django.contrib.auth.views.logout" %}"> Salir</a>)</p><h4>
+	{% else %}
+	<a href="{% url "django.contrib.auth.views.login" %}" class="top-menu"><span class="glyphicon glyphicon-lock"></a>
+	{% endif %}
+	    <h1><a href="/">PASION FUTBOLERA</a></h1>
+            <h3><a href="/">Vive el futbol</a></h3> 
+	</header>
+
+	<section id= "banner">
+	</section>
+           <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+
+	<footer>
+
+        </footer>
+
+	</section>
+
+    </body>
+    </html>

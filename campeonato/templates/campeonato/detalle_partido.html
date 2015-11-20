@@ -1,0 +1,22 @@
+{% extends 'campeonato/base.html' %}
+
+    {% block content %}
+        <div class="post">
+	    <h1>{{ partido.Equipo1 }}-{{ partido.Equipo2 }}</h1>
+	    <p>Fecha del partido: {{partido.Fecha_Partido}}</p>
+	    {% if partido.GolesEquipo1 and partido.GolesEquipo2 %}
+                <div class="marcador"> Marcador: 
+                    {{ partido.GolesEquipo1 }}-{{ partido.GolesEquipo2 }}
+            {% endif %}
+
+	{% if user.is_authenticated %}
+		<a class="btn btn-default" href="{% url 'editar_partido' pk=partido.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+		<a class="btn btn-default" href="{%	url 'eliminar_partido' pk=partido.pk %}"><span class="glyphicon	glyphicon-remove"></span></a>
+        {% endif %}
+		 </div>
+	    {% if partido.Resumen %}
+            <p>Resumen del partido:</p>
+	    <p>{{ partido.Resumen|linebreaks }}</p>
+	    {% endif %}
+        </div>
+    {% endblock %}

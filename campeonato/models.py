@@ -10,7 +10,7 @@ class Partido(models.Model):
     Resumen = models.TextField(blank=True, null=True)
     Fecha_Publicacion = models.DateTimeField(
     default=timezone.now)
-    Fecha_Partido = models.DateTimeField(blank=True, null=True)
+    Fecha_Partido = models.DateTimeField()
 
     def publicar(self):
         self.Fecha_Partido = timezone.now()

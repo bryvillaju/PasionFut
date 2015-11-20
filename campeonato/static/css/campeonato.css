@@ -1,0 +1,99 @@
+body{
+	background: #ccc;
+}
+
+#contenedor{
+	background:#fff;
+	height: auto;
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header, #banner{
+	background: #088A08;
+        margin-top: 0;
+        padding: 20px 20px 20px 20px;
+	width: 780px;
+	height: 100px;
+}
+
+#banner{
+	background:#662;
+	height: 200px;
+}
+
+footer{
+        background: #088A08;
+        width: 780px;
+        height: 100px;
+}
+
+.page-header {
+        background-color: #088A08;
+	margin-top: 0;
+        padding: 20px 20px 20px 20px;
+        }
+
+
+    header h1, header h1 a, header h1 a:visited, headerh1 a:active {
+        color: #ffffff;
+        font-size: 25pt;
+        text-decoration: none;
+    }
+
+
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+        font-size: 30pt;
+        text-decoration: none;
+    }
+
+    .content {
+	background-color:#fff;
+        margin-left: 20px;
+    }
+
+    header h4, header h4 a, header h4 a:visited, headerh4 a:active {
+	font-family:'Calibri',cursive
+	font-size: 15pt;
+	text-decoration:none;
+}
+    h1, h2, h3 {
+        font-family: 'Verdana', cursive;
+    }
+
+    .fecha {
+        float: right;
+        color: Green;
+    }
+
+    .marcador {
+        float: right;
+        color: #A5DF00;
+        font-size: 25pt;
+    }
+
+
+    .save {
+        float: right;
+    }
+
+    .post-form textarea, .post-form input {
+        width: 100%;
+    }
+
+    .top-menu, .top-menu:hover, .top-menu:visited {
+        color: #ffffff;
+        float: right;
+        font-size: 18pt;
+        margin-right: 20px;
+    }
+
+    .post {
+        margin-bottom:50px;
+    }
+
+    .post h1 a, .post h1 a:visited {
+        color: black;
+    }
